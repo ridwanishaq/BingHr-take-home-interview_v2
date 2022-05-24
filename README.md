@@ -28,6 +28,8 @@ Follow the steps mentioned below to install and run the project.
 5. Run the command php artisan migrate --seed
 6. You may create a virtualhost entry to access the application or run php artisan serve from the project root and visit http://127.0.0.1:8000
 
+<h1>Application Requirement</h1>
+<p>Minimum PHP Version: <b>8.x</b></p>
 
 <h1>Application Login Details</h1>
 <p>Email: <b>superadmin@binghr.com</b></p>
