@@ -1,64 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h1>Features</h1>
+The **BingHR-take-home-interview ** comes with a number of features which are the most common in almost all the applications. It is a template project which means it is intended to build in a way that it can be used for other projects.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+It is a modular application, and a number of modules are installed by default. It will be helpful to use it as a base for the future applications.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Major feature are developed as Modules. Module like Login Tags is separated from the core features like User, Role, Permission
 
-## Learning Laravel
+<h1>Core Features</h1>
+- User Authentication
+- Roles & Permission
+- Bootstrap 5, CoreUI,
+- Css3
+- Fontawesome 6
+- Materializecss Icon
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h1>User Guide</h1>
+<h3>Installation</h3>
+Follow the steps mentioned below to install and run the project.
 
-## Laravel Sponsors
+1. Clone or download the repository
+2. Go to the project directory and run composer install
+3. Create .env file by copying the .env.example. You may use the command to do that cp .env.example .env
+4. Update the database name and credentials in .env file
+5. Run the command php artisan migrate --seed
+6. You may create a virtualhost entry to access the application or run php artisan serve from the project root and visit http://127.0.0.1:8000
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<h1>Application Requirement</h1>
+<p>Minimum PHP Version: <b>8.x</b></p>
 
-### Premium Partners
+<h1>Application Login Details</h1>
+<p>Email: <b>superadmin@binghr.com</b></p>
+<p>Password: <b>12345678</b></p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+<h1>Screenshots</h1>
+<h4>Login Page</h4>
+<img src="https://user-images.githubusercontent.com/76391957/170045442-9c59e573-7a64-4c30-bac8-f6227ea352c0.png" />
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<h4>Users Page</h4>
+<img src="https://user-images.githubusercontent.com/76391957/170045519-f9cdc5b1-8e07-49e6-a4a7-2128bf39892d.png" />
 
-## Code of Conduct
+<h4>Add User Modal</h4>
+<img src="https://user-images.githubusercontent.com/76391957/170045716-3d5d5ddc-7ad1-488d-bc43-632607904492.png" />
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
