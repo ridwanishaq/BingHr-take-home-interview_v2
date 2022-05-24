@@ -9,6 +9,8 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Traits\HasRoles;
 
 class UserController extends Controller
 {
@@ -75,7 +77,7 @@ class UserController extends Controller
         $user = User::create($input);
         $user->assignRole($request->roles);
 
-        return redirect()->route('users.index')
+        return redirect()->route('index.users')
                         ->with('success','User created successfully');
     }
 
