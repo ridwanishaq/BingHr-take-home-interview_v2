@@ -38,18 +38,6 @@ class UserController extends Controller
         $data = User::orderBy('id','DESC')->paginate(5);
         return view('users',compact('data', 'roles'));
 
-        // ->with('i', ($request->input('page', 1) - 1) * 5);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $roles = Role::pluck('name','name')->all();
-        return view('users',compact('roles'));
     }
 
     /**
@@ -93,7 +81,7 @@ class UserController extends Controller
         $roles = Role::pluck('name','name')->all();
         $userRole = $user->roles->pluck('name','name')->all();
 
-        return view('users.edit',compact('user','roles','userRole'));
+        return view('users',compact('user','roles','userRole'));
     }
 
     /**
@@ -129,7 +117,7 @@ class UserController extends Controller
         $user->update($input);
         DB::table('model_has_roles')->where('model_id',$id)->delete();
 
-        $user->assignRole($request->input('roles'));
+        $user->assignRole($request->roles);
 
         return redirect()->route('users.index')
                         ->with('success','User updated successfully');
@@ -144,7 +132,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::find($id)->delete();
-        return redirect()->route('users.index')
+        return redirect()->route('index.users')
                         ->with('success','User deleted successfully');
     }
 }

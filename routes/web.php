@@ -28,5 +28,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class)->names([
         'index'     => 'index.users',
         'store'     => 'store.users',
+        'edit'      => 'edit.users',
+        'update'    => 'update.users',
+        'destroy'   => 'destroy.users',
     ]);
 });
