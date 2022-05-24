@@ -15,7 +15,7 @@ body{
 }
 
 
-/* 
+/*
     Blue Sidebar
 */
 #leftbar{
@@ -46,6 +46,11 @@ body{
     margin-right: 5px;
 }
 
+.nav-active{
+    border-right: 3px solid blue;
+    color: blue;
+    background-color: #fff;
+}
 
 #list-hover-items:hover{
     border-right: 3px solid blue;
@@ -102,7 +107,7 @@ body{
 }
 
 /* #topSearchInput{
-    
+
 } */
 #top-icons{
     font-size:20px;

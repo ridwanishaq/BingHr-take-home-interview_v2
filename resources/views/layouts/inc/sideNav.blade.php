@@ -21,7 +21,7 @@
     <div class="sidebar-heading sidebar-head"></div>
     <div class="list-group list-group-flush">
         <a id="list-hover-items" class="list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">dashboard</i> Dashboard</a>
-        <a id="list-hover-items" class="list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">group</i> Users</a>
+        <a id="list-hover-items" class="{{ request()->is('users') ? 'nav-active': '' }} list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">group</i> Users</a>
         <a id="list-hover-items" class="list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">business</i> Departments</a>
         <a id="list-hover-items" class="list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">group</i> Employee</a>
         <a id="list-hover-items" class="list-group-item b-none list-group-item-action list-group-item-light p-2" href="#!"><i id="sidebar-icons" class="material-icons">router</i> Activities</a>

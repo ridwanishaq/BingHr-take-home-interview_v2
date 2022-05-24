@@ -21,9 +21,9 @@ class UsersSeeder extends Seeder
 
         $user = User::create([
             'employeeID'     => Str::random(11),
-            'name'           => 'Ridwan Ishaq',
+            'name'           => 'Rilwanu Isyaku',
             'email'          => 'superadmin@binghr.com',
-            'mobile_no'      => '09088776655',
+            'mobile_no'      => '09088773245',
             'username'       => 'ridwan',
             'password'       => bcrypt('12345678')
         ]);

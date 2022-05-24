@@ -12,6 +12,26 @@
 
         <!-- Page content-->
         <div class="container-fluid">
+
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <p><strong>Opps Something went wrong</strong></p>
+                    <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="alert alert-success text-white">{{session('success')}}</div>
+            @endif
+
+            @if(session('error'))
+                <div class="alert alert-danger text-white">{{session('error')}}</div>
+            @endif
+
             <div class="mt-5 mb-3 add-user-btn">
                 <div class="btn-box">
                     <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add User</button>
@@ -50,14 +70,10 @@
                                 <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>
-                                        @if(!empty($user->getRoleName()))
-                                            @foreach($user->getRoleName() as $v)
-                                            <label class="badge bg-success">{{ $v }}</label>
-                                            @endforeach
-                                        @endif
+                                        <span class="badge bg-primary">Super Admin</span>
                                     </td>
-                                    <td>24 Oct, 2022</td>
-                                    <td>CEO</td>
+                                    <td>{{ $user->created_at->format('d M, Y') }}</td>
+                                    <td>Super Admin</td>
                                     <td>
                                         <button class="btn action-btn">
                                             <i class="material-icons">edit</i>
