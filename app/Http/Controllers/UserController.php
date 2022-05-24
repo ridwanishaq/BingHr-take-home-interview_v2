@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
-use DB;
-use Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
 
 class UserController extends Controller
@@ -17,12 +17,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    function __construct()
-    {
-         $this->middleware('permission:read|write|delete', ['only' => ['index','store', 'edit', 'create', 'destroy']]);
-         $this->middleware('permission:write', ['only' => ['index','create', 'store']]);
-         $this->middleware('permission:delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('auth');
+    //      $this->middleware('permission:read|write|delete', ['only' => ['index','store', 'edit', 'update', 'destroy']]);
+    //      $this->middleware('permission:write', ['only' => ['index','store']]);
+    //      $this->middleware('permission:delete', ['only' => ['index','destroy']]);
+    // }
 
     /**
      * Display a listing of the resource.
@@ -31,8 +32,9 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+        $roles = Role::pluck('name','name')->all();
         $data = User::orderBy('id','DESC')->paginate(5);
-        return view('users',compact('data'));
+        return view('users',compact('data', 'roles'));
 
         // ->with('i', ($request->input('page', 1) - 1) * 5);
     }
@@ -45,7 +47,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::pluck('name','name')->all();
-        return view('users.create',compact('roles'));
+        return view('users',compact('roles'));
     }
 
     /**

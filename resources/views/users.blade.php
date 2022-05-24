@@ -9,7 +9,7 @@
     <div id="page-content-wrapper">
         <!-- Top navigation-->
         @include('layouts.inc.topNav')
-        
+
         <!-- Page content-->
         <div class="container-fluid">
             <div class="mt-5 mb-3 add-user-btn">
@@ -42,73 +42,34 @@
                                 <th>Create Date</th>
                                 <th>Role</th>
                                 <th style="width:15%;">Action</th>
-                            </tr>                                    
+                            </tr>
                         </thead>
                         <tbody id="usersListTable">
-                            <tr>
-                                <td>Musa Usman [Super Admin]</td>
-                                <td>
-                                    <span class="badge  bg-danger">Super Admin</span>
-                                </td>
-                                <td>24 Oct, 2022</td>
-                                <td>CEO</td>
-                                <td>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Musa Usman [Super Admin]</td>
-                                <td>
-                                    <span class="badge bg-primary">Super Admin</span>
-                                </td>
-                                <td>24 Oct, 2022</td>
-                                <td>CEO</td>
-                                <td>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Musa Usman [Super Admin]</td>
-                                <td>
-                                    <span class="badge bg-primary">Super Admin</span>
-                                </td>
-                                <td>24 Oct, 2022</td>
-                                <td>CEO</td>
-                                <td>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Musa Usman [Super Admin]</td>
-                                <td>
-                                    <span class="badge bg-primary">Super Admin</span>
-                                </td>
-                                <td>24 Oct, 2022</td>
-                                <td>CEO</td>
-                                <td>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button class="btn action-btn">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
+                            @foreach ($data as $key => $user)
+
+                                <tr>
+                                    <td>{{ $user->name }}</td>
+                                    <td>
+                                        @if(!empty($user->getRoleName()))
+                                            @foreach($user->getRoleName() as $v)
+                                            <label class="badge bg-success">{{ $v }}</label>
+                                            @endforeach
+                                        @endif
+                                    </td>
+                                    <td>24 Oct, 2022</td>
+                                    <td>CEO</td>
+                                    <td>
+                                        <button class="btn action-btn">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button class="btn action-btn">
+                                            <i class="material-icons">delete</i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>
@@ -124,6 +85,6 @@
 
     {{-- Add User Modal --}}
     @include('layouts.inc.add-user-modal')
-    
+
 @endsection
 
