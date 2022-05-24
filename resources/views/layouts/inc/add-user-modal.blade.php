@@ -27,7 +27,7 @@
 
                             <!-- 3rd row -->
                             <div class="mb-3 col-md-4">
-                                <input type="text" name="email" class="form-control" placeholder="Email ID *" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email ID *" required>
                             </div>
                             <div class="mb-3 col-md-4">
                                 <input type="text" name="mobile_no" class="form-control" placeholder="Mobile No">
@@ -47,10 +47,10 @@
                                 <input type="text" class="form-control" placeholder="Username *" name="username" required>
                             </div>
                             <div class="mb-3 col-md-4">
-                                <input type="text" class="form-control" placeholder="Password *" name="password" required>
+                                <input type="password" class="form-control" placeholder="Password *" name="password" required>
                             </div>
                             <div class="mb-3 col-md-4">
-                                <input type="text" class="form-control" placeholder="Confirm Password *" name="confirm-password">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" name="confirm-password">
                             </div>
 
                             <!-- permission table -->
